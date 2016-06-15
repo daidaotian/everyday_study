@@ -1,19 +1,22 @@
 #define  _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-#define size 8
+#include<ctype.h>
 int main()
 {
-	float da, de;
-	da = de = 100;
-	int i = 0;
-	while (de <= da)
+	char ch;
+	int lines = 0;
+	int blanks = 0;
+	int others = 0;
+	while ((ch = getchar()) != '#')
 	{
-		de += de*0.05;
-		da += 100 * 0.1;
-		i++;
+		if (ch == '\n')
+			lines++;
+		else if (isblank(ch))//' 'Ò²ÐÐ
+			blanks++;
+		else
+			others++;
 	}
-	printf("%d         da:%f          de:%f", i, da, de);
-
+	printf("%d       %d      %d", lines, blanks, others);
 	printf("\n");
 	system("pause");
 	return 0;
