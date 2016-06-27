@@ -25,6 +25,8 @@ int main(void)
 			if (prime == YES)
 				printf("%ld is prime.\n", num);
 		}
+		while (getchar() != '\n')//跳过输入的剩余部分，防止影响下次输入
+			continue;
 		printf("Please enter another limit; ");
 		printf("Enter q to quit.\n");
 	}
